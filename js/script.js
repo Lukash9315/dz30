@@ -44,7 +44,7 @@ let fruits = [
 {
     name: 'Дині',
     quantity: 5,
-    bought: false,
+    bought: true,
     price: 9,
     totalPrice: function(){ 
       if (this.bought){
@@ -58,7 +58,7 @@ let fruits = [
 {
     name: 'Ананаси',
     quantity: 5,
-    bought: false,
+    bought: true,
     price: 10,
     totalPrice: function(){ 
       if (this.bought){
@@ -70,8 +70,10 @@ let fruits = [
     }
 }
 ];
-let a =prompt(`Введіть назву продукту`)
-buyProduct(a);
+
+let a =prompt(`Введіть назву продукту(Банани,Яблука,Апельсини,Дині,Ананаси)`)
+
+alert(`Відповідь в консолі. Я не зміг зробити щоб декілька разів питало назву фрукту`);
 function buyProduct(productName) {
   for (let i = 0; i < fruits.length; i++) {
     if (fruits[i].name === productName) {
@@ -83,7 +85,7 @@ function buyProduct(productName) {
   console.log(`Продукт "${productName}" не знайдено.`);
 }
 
-// buyProduct(a);
+buyProduct(a);
 
 
 const notBought =fruits.filter(fruit => fruit.bought == false);
